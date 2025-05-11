@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Thiwasco System</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <!-- Logo -->
+    <img src="logo.png" alt="Thiwasco Logo" class="logo" />
+
+    <!-- Login Page -->
+    <div id="login-section">
+      <h2>Thiwasco Admin Login</h2>
+      <input type="text" id="username" placeholder="Enter Username" />
+      <input type="password" id="password" placeholder="Enter Password" />
+      <button onclick="login()">Login</button>
+      <div id="login-status"></div>
+    </div>
+
+    <!-- Main App -->
+    <div id="app-section" style="display: none;">
+      <h2>Water Delivery Entry</h2>
+      <input type="text" id="truck" placeholder="Truck Number Plate" />
+      <input type="text" id="mpesa" placeholder="MPesa Reference Number" />
+      <input type="number" id="amount" placeholder="Amount Paid" />
+      <input type="text" id="destination" placeholder="Water Destination" />
+      <button onclick="saveEntry()">Save Entry</button>
+      <button onclick="downloadAllAsPDF()">Download All Entries as PDF</button>
+      <div id="entries"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
